@@ -27,7 +27,7 @@ def main():
         parser.error(str(error))
     print(DEFAULT_TITLE)
     for name, value in result.items():
-        print(f"{name}: {value:.4f}" if isinstance(value, float) else f"{name}: {value}")
+        print(f"{name}: {value:.2f}" if isinstance(value, float) else f"{name}: {value}")
 
 
 if __name__ == "__main__":
