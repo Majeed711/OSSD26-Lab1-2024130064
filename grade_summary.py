@@ -2,7 +2,7 @@
 import argparse
 import math
 
-DEFAULT_TITLE = "成绩统计"
+DEFAULT_TITLE = "成绩统计 - B1"
 
 
 def summarize(scores):
