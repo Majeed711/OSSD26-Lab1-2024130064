@@ -18,6 +18,11 @@ class GradeSummaryTest(unittest.TestCase):
     def test_single_score(self):
         self.assertEqual(summarize([75])["average"], 75)
 
+    def test_minimum_and_maximum(self):
+        result = summarize([0, 59, 100])
+        self.assertEqual(result["minimum"], 0)
+        self.assertEqual(result["maximum"], 100)
+
     def test_empty_input(self):
         with self.assertRaises(ValueError):
             summarize([])

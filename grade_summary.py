@@ -13,7 +13,8 @@ def summarize(scores):
     if any(not math.isfinite(value) or not 0 <= value <= 100 for value in values):
         raise ValueError("scores must be finite numbers between 0 and 100")
     return {"count": len(values), "average": sum(values) / len(values),
-            "passed": sum(value >= 60 for value in values)}
+            "passed": sum(value >= 60 for value in values),
+            "minimum": min(values), "maximum": max(values)}
 
 
 def main():
